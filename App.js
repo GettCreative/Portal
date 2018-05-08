@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Regform from './app/components/Regform.js'
 
 export default class App extends React.Component {
   render() {
     return (
+
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Shake your phone to open the developer menu.</Text>
+        <Regform />
       </View>
     );
   }
@@ -15,9 +15,13 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
+
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: '#36485f',
+    paddingLeft: 60,
+    paddingRight: 60,
+
+
   },
 });
