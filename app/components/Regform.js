@@ -5,9 +5,10 @@ import {
   View,
   TextInput,
   TouchableOpacity,
-  KeyboardAvoidingView,
+  KeyboardAvoidingView
 
 } from 'react-native';
+
 
 export default class Regform extends React.Component {
   render() {
@@ -16,7 +17,9 @@ export default class Regform extends React.Component {
       style = {styles.regform}
       behavioud = 'padding'
       >
-        <Text style={styles.header}> Registration </Text>
+
+
+        <Text style={styles.header}>Registration</Text>
 
         <TextInput style = {styles.textinput} placeholder = 'Name'
         underlineColorAndroid = {'transparent'} />
