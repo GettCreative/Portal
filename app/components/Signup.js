@@ -13,11 +13,11 @@ import {Actions} from 'react-native-router-flux';
 
 
 
-export default class Login extends React.Component {
+export default class Signup extends React.Component {
 
 
-  signup(){
-    Actions.signup()
+  goBack(){
+    Actions.pop() //pop to go back to the previous page
   }
 
   render() {
@@ -26,12 +26,10 @@ export default class Login extends React.Component {
 
       <View style = {styles.container}>
       <Logo />
-      <Form type="Login"/>
+      <Form type="Signup"/>
       <View style = {styles.signupTextContent}>
-        <Text style={styles.signupTextColor}> Dont Have an Account Yet ? </Text>
-        <TouchableOpacity onPress={this.signup}>
-        <Text style = {styles.signupButton}>Sign Up</Text>
-        </TouchableOpacity>
+        <Text style={styles.signupTextColor}> Already have an account ? </Text>
+        <TouchableOpacity onPress={this.goBack}><Text style = {styles.signupButton}>Sign In</Text></TouchableOpacity>
       </View>
 
       </View>
