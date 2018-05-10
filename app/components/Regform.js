@@ -35,7 +35,7 @@ export default class Regform extends React.Component {
         secureTextEntry = {true}
         underlineColorAndroid = {'transparent'} />
 
-        <TouchableOpacity style = {styles.button} onPress={this.onClick}>
+        <TouchableOpacity style = {styles.button} >
           <Text style={styles.btntext}>Sign Up</Text>
         </TouchableOpacity>
 
@@ -43,8 +43,6 @@ export default class Regform extends React.Component {
 
     );
   }
-
-  
 
 const styles = StyleSheet.create({
   regform: {
