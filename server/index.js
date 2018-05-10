@@ -6,7 +6,7 @@ var router=require('./routes.js');
 var session=require('express-session');
 
 var app = express();
-
+//adding 
 //adding express-session to our app.
 app.use(session({
   secret:"123456",
