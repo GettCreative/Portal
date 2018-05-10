@@ -1,29 +1,20 @@
 import React from 'react';
 import {
   StyleSheet,
-  Text,
   View,
   StatusBar,
-  Image
 } from 'react-native';
 
 //Imports
-import Regform from './app/components/Regform.js'
-import Login from './app/components/Login'
-import Logo from './app/components/Logo.js'
+import Routes from './app/Routes.js'
+
 
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Logo style = {styles.logo}/>
-
-        <StatusBar
-        backgroundColor = '#36485f'
-        barStyle = 'light-content'/>
-        <Regform />
-        <Login />
+      <Routes />
       </View>
     );
   }
@@ -39,11 +30,5 @@ const styles = StyleSheet.create({
     paddingRight: 60,
 
 
-  },
-
-  logo:{
-    justifyContent: 'center',
-    paddingBottom: 100,
-    alignItems: 'center',
   }
 });
