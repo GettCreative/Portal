@@ -2,7 +2,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 // var router=require('./routes.js');
 var mongoose=require('mongoose')
-var db1=require('./index.js')
+// var db1=require('./index.js')
 var session=require('express-session');
 
 var app = express();
