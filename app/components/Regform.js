@@ -44,15 +44,7 @@ export default class Regform extends React.Component {
     );
   }
 
-
- onClick(){
-    fetch('http://192.168.8.119:3000/signup')
-    .then((res) => {
-      alert('done')
-    })
-  }
   
-}
 
 const styles = StyleSheet.create({
   regform: {
