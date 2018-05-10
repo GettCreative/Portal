@@ -20,7 +20,11 @@
   },
   "dependencies": {
     "expo": "^27.0.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "metro-bundler": "^0.22.1",
+    "mongoose": "^5.0.18",
+    "path": "^0.12.7",
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "tcomb-form-native": "^0.6.11"
