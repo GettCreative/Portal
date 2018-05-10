@@ -19,8 +19,13 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
     "expo": "^27.0.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "metro-bundler": "^0.22.1",
+    "mongodb": "^3.0.8",
+    "mongoose": "^5.0.18",
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-material-textinput": "^1.1.0",
