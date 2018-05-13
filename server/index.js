@@ -50,7 +50,7 @@ app.post("/signup",function(req,res) {
         })
     })
 })
-
+//login
 app.post('/login',function(req,res) {
     var email = req.body.email
     var pass = req.body.password
