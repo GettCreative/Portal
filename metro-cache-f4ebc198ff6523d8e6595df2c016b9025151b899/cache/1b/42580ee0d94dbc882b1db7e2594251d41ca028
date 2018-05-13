@@ -1,0 +1,33 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = {
+    get Lottie() {
+      return _require(_dependencyMap[0], 'lottie-react-native');
+    },
+
+    get Branch() {
+      return _require(_dependencyMap[1], 'react-native-branch').default;
+    },
+
+    get GestureHandler() {
+      console.warn('GestureHandler is no longer in DangerZone, you can now import it directly from the expo package.');
+      return _require(_dependencyMap[2], 'react-native-gesture-handler');
+    },
+
+    get Localization() {
+      return _require(_dependencyMap[3], './Localization').default;
+    },
+
+    get Payments() {
+      return _require(_dependencyMap[4], './Payments');
+    },
+
+    get Print() {
+      return _require(_dependencyMap[5], './Print');
+    },
+
+    get DeviceMotion() {
+      return _require(_dependencyMap[6], './sensor/DeviceMotion').default;
+    }
+
+  };
+});

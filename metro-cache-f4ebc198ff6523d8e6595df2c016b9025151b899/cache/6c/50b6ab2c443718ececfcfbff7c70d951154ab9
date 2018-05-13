@@ -1,0 +1,292 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+  _require(_dependencyMap[0], "./environment/validate");
+
+  _require(_dependencyMap[1], "./environment/logging");
+
+  _require(_dependencyMap[2], "./Location");
+
+  var _reactNative = _require(_dependencyMap[3], "react-native");
+
+  var _Constants = _require(_dependencyMap[4], "./Constants");
+
+  var _Constants2 = _interopRequireDefault(_Constants);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  _reactNative.YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
+
+  if (typeof _Constants2.default.manifest.env === 'object') {
+    _extends(process.env, _Constants2.default.manifest.env);
+  }
+
+  module.exports = {
+    get Crypto() {
+      return _reactNative.NativeModules.ExponentCrypto;
+    },
+
+    get Fabric() {
+      return _reactNative.NativeModules.ExponentFabric;
+    },
+
+    get ImageCropper() {
+      return _reactNative.NativeModules.ExponentImageCropper;
+    },
+
+    get apisAreAvailable() {
+      return _require(_dependencyMap[5], './apisAreAvailable').default;
+    },
+
+    get registerRootComponent() {
+      return _require(_dependencyMap[6], './launch/registerRootComponent').default;
+    },
+
+    get takeSnapshotAsync() {
+      return _require(_dependencyMap[7], './takeSnapshotAsync').default;
+    },
+
+    get Accelerometer() {
+      return _require(_dependencyMap[8], './sensor/Accelerometer').default;
+    },
+
+    get Asset() {
+      return _require(_dependencyMap[9], './Asset').default;
+    },
+
+    get AuthSession() {
+      return _require(_dependencyMap[10], './AuthSession').default;
+    },
+
+    get ErrorRecovery() {
+      return _require(_dependencyMap[11], './ErrorRecovery').default;
+    },
+
+    get GLView() {
+      return _require(_dependencyMap[12], './GLView').default;
+    },
+
+    get Gyroscope() {
+      return _require(_dependencyMap[13], './sensor/Gyroscope').default;
+    },
+
+    get Magnetometer() {
+      return _require(_dependencyMap[14], './sensor/Magnetometer').default;
+    },
+
+    get MagnetometerUncalibrated() {
+      return _require(_dependencyMap[15], './sensor/MagnetometerUncalibrated').default;
+    },
+
+    get Notifications() {
+      return _require(_dependencyMap[16], './Notifications').default;
+    },
+
+    get SQLite() {
+      return _require(_dependencyMap[17], './SQLite').default;
+    },
+
+    get AdMobBanner() {
+      return _require(_dependencyMap[18], './admob/RNAdMobBanner').default;
+    },
+
+    get PublisherBanner() {
+      return _require(_dependencyMap[19], './admob/RNPublisherBanner').default;
+    },
+
+    get AdMobInterstitial() {
+      return _require(_dependencyMap[20], './admob/RNAdMobInterstitial');
+    },
+
+    get AdMobRewarded() {
+      return _require(_dependencyMap[21], './admob/RNAdMobRewarded');
+    },
+
+    get AppLoading() {
+      return _require(_dependencyMap[22], './launch/AppLoading').default;
+    },
+
+    get BarCodeScanner() {
+      return _require(_dependencyMap[23], './BarCodeScanner').default;
+    },
+
+    get BlurView() {
+      return _require(_dependencyMap[24], './effects/BlurView').default;
+    },
+
+    get Camera() {
+      return _require(_dependencyMap[25], './Camera').default;
+    },
+
+    get FaceDetector() {
+      return _require(_dependencyMap[26], './FaceDetector').default;
+    },
+
+    get GestureHandler() {
+      return _require(_dependencyMap[27], 'react-native-gesture-handler');
+    },
+
+    get KeepAwake() {
+      return _require(_dependencyMap[28], './KeepAwake').default;
+    },
+
+    get LinearGradient() {
+      return _require(_dependencyMap[29], './effects/LinearGradient').default;
+    },
+
+    get MapView() {
+      return _require(_dependencyMap[30], 'react-native-maps').default;
+    },
+
+    get Modal() {
+      return _require(_dependencyMap[31], './modal/Modal').default;
+    },
+
+    get Video() {
+      return _require(_dependencyMap[32], './av/Video').default;
+    },
+
+    get WebBrowser() {
+      return _require(_dependencyMap[33], './WebBrowser').default;
+    },
+
+    get Svg() {
+      return _require(_dependencyMap[34], './Svg').default;
+    },
+
+    get Fingerprint() {
+      return _require(_dependencyMap[35], './Fingerprint');
+    },
+
+    get Amplitude() {
+      return _require(_dependencyMap[36], './Amplitude').default;
+    },
+
+    get Audio() {
+      return _require(_dependencyMap[37], './av/Audio');
+    },
+
+    get Brightness() {
+      return _require(_dependencyMap[38], './Brightness');
+    },
+
+    get Calendar() {
+      return _require(_dependencyMap[39], './Calendar');
+    },
+
+    get Constants() {
+      return _require(_dependencyMap[4], './Constants').default;
+    },
+
+    get Contacts() {
+      return _require(_dependencyMap[40], './Contacts');
+    },
+
+    get DangerZone() {
+      return _require(_dependencyMap[41], './DangerZone');
+    },
+
+    get DocumentPicker() {
+      return _require(_dependencyMap[42], './DocumentPicker');
+    },
+
+    get FileSystem() {
+      return _require(_dependencyMap[43], './FileSystem');
+    },
+
+    get Font() {
+      return _require(_dependencyMap[44], './Font');
+    },
+
+    get Google() {
+      return _require(_dependencyMap[45], './Google');
+    },
+
+    get Haptic() {
+      return _require(_dependencyMap[46], './Haptic');
+    },
+
+    get Icon() {
+      return _require(_dependencyMap[47], './Icon').default;
+    },
+
+    get ImageManipulator() {
+      return _require(_dependencyMap[48], './ImageManipulator');
+    },
+
+    get ImagePicker() {
+      return _require(_dependencyMap[49], './ImagePicker');
+    },
+
+    get Linking() {
+      return _require(_dependencyMap[50], './Linking').default;
+    },
+
+    get Location() {
+      return _require(_dependencyMap[2], './Location').default;
+    },
+
+    get Logs() {
+      return _require(_dependencyMap[51], './logs/Logs').default;
+    },
+
+    get MailComposer() {
+      return _require(_dependencyMap[52], './MailComposer');
+    },
+
+    get MediaLibrary() {
+      return _require(_dependencyMap[53], './MediaLibrary');
+    },
+
+    get Pedometer() {
+      return _require(_dependencyMap[54], './Pedometer');
+    },
+
+    get Permissions() {
+      return _require(_dependencyMap[55], './Permissions');
+    },
+
+    get Facebook() {
+      return _require(_dependencyMap[56], './Facebook').default;
+    },
+
+    get FacebookAds() {
+      return _require(_dependencyMap[57], './facebook-ads');
+    },
+
+    get IntentLauncherAndroid() {
+      return _require(_dependencyMap[58], './IntentLauncherAndroid');
+    },
+
+    get ScreenOrientation() {
+      return _require(_dependencyMap[59], './ScreenOrientation');
+    },
+
+    get SecureStore() {
+      return _require(_dependencyMap[60], './SecureStore');
+    },
+
+    get Segment() {
+      return _require(_dependencyMap[61], './Segment').default;
+    },
+
+    get Speech() {
+      return _require(_dependencyMap[62], './Speech');
+    },
+
+    get Updates() {
+      return _require(_dependencyMap[63], './Updates');
+    },
+
+    get Util() {
+      return _require(_dependencyMap[64], './Util');
+    }
+
+  };
+
+  if (global) {
+    global.__exponent = module.exports;
+    global.__expo = module.exports;
+    global.Expo = module.exports;
+  }
+});

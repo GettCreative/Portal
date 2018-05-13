@@ -1,0 +1,155 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/home/nooreddein/Desktop/Portal/app/components/Form.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = _require(_dependencyMap[2], "react-native");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    SignUp: {
+      displayName: "SignUp"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/nooreddein/Desktop/Portal/app/components/Form.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var SignUp = _wrapComponent("SignUp")(function (_React$Component) {
+    _inherits(SignUp, _React$Component);
+
+    function SignUp() {
+      _classCallCheck(this, SignUp);
+
+      return _possibleConstructorReturn(this, (SignUp.__proto__ || Object.getPrototypeOf(SignUp)).apply(this, arguments));
+    }
+
+    _createClass(SignUp, [{
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 17
+            }
+          },
+          _react3.default.createElement(_reactNative.TextInput, {
+            style: styles.inputBox,
+            underlineColorAndroid: "rgba(0,0,0,0)",
+            placeholder: "Email",
+            placeholderTextColor: "#ffffff",
+            selectionColor: "#fff",
+            keyboardType: "email-address",
+            onSubmitEditing: function onSubmitEditing() {
+              return _this2.password.focus();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 18
+            }
+          }),
+          _react3.default.createElement(_reactNative.TextInput, {
+            style: styles.inputBox,
+            underlineColorAndroid: "rgba(0,0,0,0)",
+            placeholder: "Password",
+            secureTextEntry: true,
+            placeholderTextColor: "#ffffff",
+            ref: function ref(input) {
+              return _this2.password = input;
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 28
+            }
+          }),
+          _react3.default.createElement(
+            _reactNative.TouchableOpacity,
+            {
+              style: styles.button,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 37
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: styles.buttonText,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 39
+                }
+              },
+              this.props.type
+            )
+          )
+        );
+      }
+    }]);
+
+    return SignUp;
+  }(_react3.default.Component));
+
+  exports.default = SignUp;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flexGrow: 1,
+      justifyContent: 'center',
+      alignItems: 'center'
+    },
+    inputBox: {
+      width: 300,
+      backgroundColor: 'rgba(255,255,255,0.3)',
+      paddingHorizontal: 35,
+      color: '#ffffff',
+      marginVertical: 15
+    },
+    button: {
+      width: 300,
+      backgroundColor: '#1E88E5',
+      marginVertical: 15,
+      paddingVertical: 12
+    },
+    buttonText: {
+      fontSize: 18,
+      fontWeight: '500',
+      color: '#ffffff',
+      textAlign: 'center'
+    }
+  });
+});
