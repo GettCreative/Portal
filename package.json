@@ -13,14 +13,19 @@
     "eject": "react-native-scripts eject",
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
+    "server-dev": "nodemon server/index.js",
     "test": "jest"
   },
   "jest": {
     "preset": "jest-expo"
   },
   "dependencies": {
+    "bcrypt": "^2.0.1",
+    "body-parser": "^1.17.2",
     "expo": "^27.0.1",
+    "express": "^4.15.0",
     "metro-bundler": "^0.22.1",
+    "mongoose": "^4.8.6",
     "react": "16.3.1",
     "react-native": "~0.55.2",
     "react-native-material-textinput": "^1.1.0",
