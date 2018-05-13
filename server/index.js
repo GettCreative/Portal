@@ -3,6 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var bcrypt  = require('bcrypt')
 var app = express();
+var slatRounds = 10
 // ---------------------------------------------------------------
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
@@ -12,7 +13,8 @@ app.post('/signup', function (req, res) {
 	var pass = req.body.password
 	var username = req.body.username
 	var name = req.body.name
-	bcrypt.hash(pass,10,function(err,hash) {
+	console.log(req.body)
+	bcrypt.hash(req.body.password,slatRounds,function(err,hash) {
 		if(err){
 			console.log('error while hashing',err)
           }

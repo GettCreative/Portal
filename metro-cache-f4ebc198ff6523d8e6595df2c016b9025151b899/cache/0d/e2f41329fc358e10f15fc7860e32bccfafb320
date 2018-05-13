@@ -1,0 +1,319 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/home/nooreddein/Desktop/Portal/app/components/Signup.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = _require(_dependencyMap[2], "react-native");
+
+  var _Logo = _require(_dependencyMap[3], "../components/Logo.js");
+
+  var _Logo2 = _interopRequireDefault(_Logo);
+
+  var _reactNativeRouterFlux = _require(_dependencyMap[4], "react-native-router-flux");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    Signup: {
+      displayName: "Signup"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/nooreddein/Desktop/Portal/app/components/Signup.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var Signup = _wrapComponent("Signup")(function (_React$Component) {
+    _inherits(Signup, _React$Component);
+
+    function Signup() {
+      _classCallCheck(this, Signup);
+
+      var _this = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this));
+
+      _this.state = {
+        name: '',
+        email: '',
+        username: '',
+        password: ''
+      };
+      return _this;
+    }
+
+    _createClass(Signup, [{
+      key: "goBack",
+      value: function goBack() {
+        _reactNativeRouterFlux.Actions.login();
+      }
+    }, {
+      key: "home",
+      value: function home() {
+        _reactNativeRouterFlux.Actions.profile();
+      }
+    }, {
+      key: "register",
+      value: function register() {
+        var that = this;
+        fetch('http://192.168.1.157:3000/signup', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            password: that.state.password,
+            username: that.state.username,
+            name: that.state.name,
+            email: that.state.email
+          })
+        });
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 57
+            }
+          },
+          _react3.default.createElement(_Logo2.default, {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 58
+            }
+          }),
+          _react3.default.createElement(_reactNative.TextInput, {
+            onChangeText: function onChangeText(name) {
+              return _this2.setState({
+                name: name
+              });
+            },
+            style: styles.inputBox,
+            underlineColorAndroid: "rgba(0,0,0,0)",
+            placeholder: "Name",
+            placeholderTextColor: "#ffffff",
+            selectionColor: "#fff",
+            onSubmitEditing: function onSubmitEditing() {
+              return _this2.password.focus();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 60
+            }
+          }),
+          _react3.default.createElement(_reactNative.TextInput, {
+            onChangeText: function onChangeText(email) {
+              return _this2.setState({
+                email: email
+              });
+            },
+            style: styles.inputBox,
+            underlineColorAndroid: "rgba(0,0,0,0)",
+            placeholder: "Email",
+            placeholderTextColor: "#ffffff",
+            selectionColor: "#fff",
+            onSubmitEditing: function onSubmitEditing() {
+              return _this2.password.focus();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 70
+            }
+          }),
+          _react3.default.createElement(_reactNative.TextInput, {
+            onChangeText: function onChangeText(username) {
+              return _this2.setState({
+                username: username
+              });
+            },
+            style: styles.inputBox,
+            underlineColorAndroid: "rgba(0,0,0,0)",
+            placeholder: "Choose a User Name",
+            placeholderTextColor: "#ffffff",
+            selectionColor: "#fff",
+            onSubmitEditing: function onSubmitEditing() {
+              return _this2.password.focus();
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 80
+            }
+          }),
+          _react3.default.createElement(_reactNative.TextInput, {
+            onChangeText: function onChangeText(password) {
+              return _this2.setState({
+                password: password
+              });
+            },
+            style: styles.inputBox,
+            underlineColorAndroid: "rgba(0,0,0,0)",
+            placeholder: "Password",
+            secureTextEntry: true,
+            placeholderTextColor: "#ffffff",
+            ref: function ref(input) {
+              return _this2.password = input;
+            },
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 90
+            }
+          }),
+          _react3.default.createElement(
+            _reactNative.TouchableOpacity,
+            {
+              style: styles.button,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 100
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                onPress: this.register.bind(this),
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 102
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  style: styles.buttonText,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 102
+                  }
+                },
+                "Sign Up"
+              )
+            )
+          ),
+          _react3.default.createElement(
+            _reactNative.View,
+            {
+              style: styles.signupTextContent,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 105
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              {
+                style: styles.signupTextColor,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 106
+                }
+              },
+              " Already have an account ? "
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                onPress: this.goBack,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 107
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  style: styles.signupButton,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 107
+                  }
+                },
+                "Sign In"
+              )
+            )
+          )
+        );
+      }
+    }]);
+
+    return Signup;
+  }(_react3.default.Component));
+
+  exports.default = Signup;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      backgroundColor: 'black',
+      flex: 1,
+      alignItems: 'center',
+      justifyContent: 'center'
+    },
+    signupTextContent: {
+      flexGrow: 1,
+      alignItems: 'flex-end',
+      justifyContent: 'flex-end',
+      paddingVertical: 16,
+      flexDirection: 'row'
+    },
+    signupTextColor: {
+      color: 'white',
+      fontSize: 15
+    },
+    signupButton: {
+      color: 'red',
+      fontSize: 16,
+      fontWeight: '500'
+    },
+    inputBox: {
+      width: 300,
+      backgroundColor: 'rgba(255,255,255,0.3)',
+      paddingHorizontal: 35,
+      color: '#ffffff',
+      marginVertical: 15
+    },
+    button: {
+      width: 300,
+      backgroundColor: '#1E88E5',
+      marginVertical: 15,
+      paddingVertical: 12
+    },
+    buttonText: {
+      fontSize: 18,
+      fontWeight: '500',
+      color: '#ffffff',
+      textAlign: 'center'
+    }
+  });
+});

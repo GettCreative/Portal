@@ -1,0 +1,13 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/node_modules/react-native-router-flux/images",
+    "width": 26,
+    "height": 42,
+    "scales": [1],
+    "hash": "fb13fafd1da1ad19e708c53cfad2e514",
+    "name": "back_chevron",
+    "type": "png",
+    "fileHashes": ["fb13fafd1da1ad19e708c53cfad2e514"]
+  });
+});

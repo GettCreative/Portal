@@ -1,0 +1,13 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+    "__packager_asset": true,
+    "httpServerLocation": "/assets/node_modules/react-native-router-flux/images",
+    "width": 26,
+    "height": 42,
+    "scales": [1],
+    "hash": "315b6bc9518b83448be6761e6cc5cb7e",
+    "name": "menu_burger",
+    "type": "png",
+    "fileHashes": ["315b6bc9518b83448be6761e6cc5cb7e"]
+  });
+});

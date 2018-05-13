@@ -34,15 +34,19 @@ export default class Signup extends React.Component {
     Actions.profile()
   }
   register(){
-    fetch('https://192.168.1.157:3000/signup', {
+    var that = this
+
+    fetch('http://192.168.1.157:3000/signup', {
   method: 'POST',
   headers: {
     Accept: 'application/json',
     'Content-Type': 'application/json',
   },
   body: JSON.stringify({
-    firstParam: 'yourValue',
-    secondParam: 'yourOtherValue',
+        password:that.state.password,
+        username:that.state.username,
+        name:that.state.name,
+        email:that.state.email
   }),
 });
   }
@@ -95,7 +99,7 @@ export default class Signup extends React.Component {
 
       <TouchableOpacity style={styles.button} >
 
-      <TouchableOpacity onPress={this.profile}><Text style = {styles.buttonText}>Sign Up</Text></TouchableOpacity>
+      <TouchableOpacity onPress={this.register.bind(this)}><Text style = {styles.buttonText}>Sign Up</Text></TouchableOpacity>
 
       </TouchableOpacity>
       <View style = {styles.signupTextContent}>

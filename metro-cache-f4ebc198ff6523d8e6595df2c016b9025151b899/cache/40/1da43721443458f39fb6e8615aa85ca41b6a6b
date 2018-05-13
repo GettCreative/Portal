@@ -1,0 +1,111 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/home/nooreddein/Desktop/Portal/app/components/Logo.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = _require(_dependencyMap[2], "react-native");
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    Logo: {
+      displayName: "Logo"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/nooreddein/Desktop/Portal/app/components/Logo.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var Logo = _wrapComponent("Logo")(function (_React$Component) {
+    _inherits(Logo, _React$Component);
+
+    function Logo() {
+      _classCallCheck(this, Logo);
+
+      return _possibleConstructorReturn(this, (Logo.__proto__ || Object.getPrototypeOf(Logo)).apply(this, arguments));
+    }
+
+    _createClass(Logo, [{
+      key: "render",
+      value: function render() {
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 12
+            }
+          },
+          _react3.default.createElement(_reactNative.Image, {
+            style: {
+              width: 40,
+              height: 80
+            },
+            source: _require(_dependencyMap[3], '../images/Origin_Portal.gif'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 13
+            }
+          }),
+          _react3.default.createElement(
+            _reactNative.Text,
+            {
+              style: styles.logoText,
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 17
+              }
+            },
+            "PORTAL"
+          )
+        );
+      }
+    }]);
+
+    return Logo;
+  }(_react3.default.Component));
+
+  exports.default = Logo;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flexGrow: 1,
+      justifyContent: 'flex-end',
+      alignItems: 'center'
+    },
+    logoText: {
+      marginVertical: 15,
+      fontSize: 32,
+      color: 'white'
+    }
+  });
+});

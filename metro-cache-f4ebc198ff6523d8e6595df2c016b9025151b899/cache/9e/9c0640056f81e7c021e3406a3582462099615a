@@ -1,0 +1,212 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+
+  var _react2 = _require(_dependencyMap[0], "react");
+
+  var _react3 = _interopRequireDefault(_react2);
+
+  var _index = _require(_dependencyMap[1], "./../../node_modules/react-transform-hmr/lib/index.js");
+
+  var _index2 = _interopRequireDefault(_index);
+
+  var _jsxFileName = "/home/nooreddein/Desktop/Portal/app/components/Profile.js";
+
+  var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+  var _reactNative = _require(_dependencyMap[2], "react-native");
+
+  var _ImageElement = _require(_dependencyMap[3], "./ImageElement.js");
+
+  var _ImageElement2 = _interopRequireDefault(_ImageElement);
+
+  function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+  function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+  function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+  function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+  var _components = {
+    Profile: {
+      displayName: "Profile"
+    }
+  };
+
+  var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+    filename: "/home/nooreddein/Desktop/Portal/app/components/Profile.js",
+    components: _components,
+    locals: [module],
+    imports: [_react3.default]
+  });
+
+  function _wrapComponent(id) {
+    return function (Component) {
+      return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+    };
+  }
+
+  var Profile = _wrapComponent("Profile")(function (_React$Component) {
+    _inherits(Profile, _React$Component);
+
+    function Profile() {
+      var _ref;
+
+      var _temp, _this, _ret;
+
+      _classCallCheck(this, Profile);
+
+      for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+        args[_key] = arguments[_key];
+      }
+
+      return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Profile.__proto__ || Object.getPrototypeOf(Profile)).call.apply(_ref, [this].concat(args))), _this), _this.state = {
+        modalVisible: false,
+        modalImage: _require(_dependencyMap[4], '../images/dinosaurs.jpg'),
+        images: [_require(_dependencyMap[4], '../images/dinosaurs.jpg'), _require(_dependencyMap[4], '../images/dinosaurs.jpg'), _require(_dependencyMap[4], '../images/dinosaurs.jpg'), _require(_dependencyMap[4], '../images/dinosaurs.jpg'), _require(_dependencyMap[4], '../images/dinosaurs.jpg'), _require(_dependencyMap[4], '../images/dinosaurs.jpg')]
+      }, _temp), _possibleConstructorReturn(_this, _ret);
+    }
+
+    _createClass(Profile, [{
+      key: "setModalVisible",
+      value: function setModalVisible(visible, imageKey) {
+        this.setState({
+          modalImage: this.state.images[imageKey]
+        });
+        this.setState({
+          modalVisible: visible
+        });
+      }
+    }, {
+      key: "getImage",
+      value: function getImage() {
+        return this.state.modalImage;
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _this2 = this;
+
+        var images = this.state.images.map(function (val, key) {
+          return _react3.default.createElement(
+            _reactNative.TouchableWithoutFeedback,
+            {
+              key: key,
+              onPress: function onPress() {
+                _this2.setModalVisible(true, key);
+              },
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 45
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.imagewrap,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 47
+                }
+              },
+              _react3.default.createElement(_ImageElement2.default, {
+                imgsource: val,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 48
+                }
+              })
+            )
+          );
+        });
+        return _react3.default.createElement(
+          _reactNative.View,
+          {
+            style: styles.container,
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 55
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.Modal,
+            {
+              style: styles.modal,
+              animationType: 'fade',
+              transparent: true,
+              visible: this.state.modalVisible,
+              onRequestClose: function onRequestClose() {},
+              __source: {
+                fileName: _jsxFileName,
+                lineNumber: 56
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.View,
+              {
+                style: styles.modal,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 62
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                {
+                  style: styles.text,
+                  onPress: function onPress() {
+                    _this2.setModalVisible(false);
+                  },
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 63
+                  }
+                },
+                "Close"
+              ),
+              _react3.default.createElement(_ImageElement2.default, {
+                imgsource: this.state.modalImage,
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 66
+                }
+              })
+            )
+          ),
+          images
+        );
+      }
+    }]);
+
+    return Profile;
+  }(_react3.default.Component));
+
+  exports.default = Profile;
+
+  var styles = _reactNative.StyleSheet.create({
+    container: {
+      flex: 1,
+      flexDirection: 'row',
+      flexWrap: 'wrap',
+      backgroundColor: 'black',
+      paddingLeft: 20,
+      paddingRight: 20,
+      paddingTop: 20
+    },
+    imagewrap: {
+      margin: 2,
+      height: 200,
+      width: 150,
+      backgroundColor: 'black'
+    },
+    modal: {
+      flex: 1,
+      backgroundColor: 'rgba(0,0,0, 0.5)'
+    },
+    text: {
+      color: '#fff'
+    }
+  });
+});

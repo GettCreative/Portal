@@ -1,0 +1,13 @@
+__d(function (global, _require, module, exports, _dependencyMap) {
+	module.exports = _require(_dependencyMap[0], "react-native/Libraries/Image/AssetRegistry").registerAsset({
+		"__packager_asset": true,
+		"httpServerLocation": "/assets/app/images",
+		"width": 806,
+		"height": 630,
+		"scales": [1],
+		"hash": "8d96f431101b1b0866d3c58539a65850",
+		"name": "dinosaurs",
+		"type": "jpg",
+		"fileHashes": ["8d96f431101b1b0866d3c58539a65850"]
+	});
+});
