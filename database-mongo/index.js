@@ -20,16 +20,16 @@ var userSchema = mongoose.Schema({
 
 var User = mongoose.model('User', userSchema);
 
-var save = function(data,callback) {
-  var user = new User(data)
-  user.save(function(err, dataRes) {
-    if(err) {
-      callback(err, null);
-    } else {
-      callback(null, dataRes);
+var save=function(PatientInstance){
+
+  PatientInstance.save(function(err,patient){
+    if(err){
+      console.log(err)
+    }else{
+      console.log('saved patient!')
     }
-  });
-};
+  })
+}
 
 module.exports.save = save;
 module.exports.user = User
