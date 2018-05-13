@@ -16,7 +16,15 @@ import {Actions} from 'react-native-router-flux';
 
 
 export default class Signup extends React.Component {
-
+  constructor(){
+    super()
+    this.state = {
+      name:'',
+      email:'',
+      username:'',
+      password:''
+    }
+  }
 
   goBack(){
     Actions.login() //pop to go back to the previous page
@@ -25,7 +33,19 @@ export default class Signup extends React.Component {
   home(){
     Actions.profile()
   }
-
+  register(){
+    fetch('https://192.168.1.157:3000/signup', {
+  method: 'POST',
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    firstParam: 'yourValue',
+    secondParam: 'yourOtherValue',
+  }),
+});
+  }
   render() {
     return (
 
@@ -34,6 +54,7 @@ export default class Signup extends React.Component {
       <Logo />
 
       <TextInput
+      onChangeText={(name) => this.setState({name})}
       style = {styles.inputBox}
       underlineColorAndroid = 'rgba(0,0,0,0)'
       placeholder = 'Name'
@@ -43,6 +64,7 @@ export default class Signup extends React.Component {
       />
 
       <TextInput
+      onChangeText={(email) => this.setState({email})}
       style = {styles.inputBox}
       underlineColorAndroid = 'rgba(0,0,0,0)'
       placeholder = 'Email'
@@ -52,6 +74,7 @@ export default class Signup extends React.Component {
       />
 
       <TextInput
+      onChangeText={(username) => this.setState({username})}
       style = {styles.inputBox}
       underlineColorAndroid = 'rgba(0,0,0,0)'
       placeholder = 'Choose a User Name'
@@ -61,6 +84,7 @@ export default class Signup extends React.Component {
       />
 
       <TextInput
+      onChangeText={(password) => this.setState({password})}
       style = {styles.inputBox}
       underlineColorAndroid = 'rgba(0,0,0,0)'
       placeholder = 'Password'
@@ -69,7 +93,7 @@ export default class Signup extends React.Component {
       ref = {(input) => this.password = input}
       />
 
-      <TouchableOpacity style={styles.button}>
+      <TouchableOpacity style={styles.button} >
 
       <TouchableOpacity onPress={this.profile}><Text style = {styles.buttonText}>Sign Up</Text></TouchableOpacity>
 

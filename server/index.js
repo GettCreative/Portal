@@ -7,16 +7,21 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 // -----------------------hash------------------------------------
-app.post('/login', function (req, res) {
+app.post('/signup', function (req, res) {
 	var email = req.body.email
 	var pass = req.body.password
+	var username = req.body.username
+	var name = req.body.name
 	bcrypt.hash(pass,10,function(err,hash) {
 		if(err){
 			console.log('error while hashing',err)
           }
 		db.save({
 			email:email,
-			passwor:hash
+			passwor:hash,
+			username:username,
+			name:name
+
 		},function(err,data){
 			if(err){
 				console.log('error while saving',err)
@@ -26,7 +31,7 @@ app.post('/login', function (req, res) {
 	})
 });
 // --------------------------COMPARE--------------------------------
-app.post('/signup',function(req,res){
+app.post('/login',function(req,res){
 	var email = req.body.email
 	var pass = req.body.password
 	db.user.findOne({email:email},function(err,data){

@@ -19,7 +19,6 @@ export default class Login extends React.Component {
   signup(){
     Actions.signup()
   }
-
   render() {
     return (
 
