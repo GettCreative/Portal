@@ -8,14 +8,35 @@ import {
 } from 'react-native';
 
 export default class SignUp extends React.Component {
+  constructor(){
+    super()
+    this.state = {
+      email:'',
+      password:''
+    }
+  }
+login(){
+  var that = this
 
-
+    fetch('http://192.168.1.157:3000/login', {
+  method: 'POST',
+  headers: {
+    Accept: 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+        password:that.state.password,
+        email:that.state.email
+  }),
+});
+}
 
 
   render (){
     return(
       <View style = {styles.container} >
         <TextInput
+        onChangeText={(email) => this.setState({email})}
         style = {styles.inputBox}
         underlineColorAndroid = 'rgba(0,0,0,0)'
         placeholder = 'Email'
@@ -26,6 +47,7 @@ export default class SignUp extends React.Component {
         />
 
         <TextInput
+        onChangeText={(password) => this.setState({password})}
         style = {styles.inputBox}
         underlineColorAndroid = 'rgba(0,0,0,0)'
         placeholder = 'Password'
@@ -34,7 +56,7 @@ export default class SignUp extends React.Component {
         ref = {(input) => this.password = input}
         />
 
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity onPress={this.login.bind(this)} style={styles.button}>
 
         <Text style = {styles.buttonText}>{this.props.type}</Text>
 
