@@ -7,7 +7,7 @@ import {
   TouchableOpacity
 } from 'react-native';
 
-export default class Form extends React.Component {
+export default class SignUp extends React.Component {
 
 
 
