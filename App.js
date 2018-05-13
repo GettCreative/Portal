@@ -7,6 +7,7 @@ import {
 
 //Imports
 import Routes from './app/Routes.js'
+import Profile from './app/components/Profile.js'
 
 
 
@@ -25,9 +26,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    backgroundColor: 'black',
-    paddingLeft: 60,
-    paddingRight: 60,
+    backgroundColor: 'white',
+    paddingLeft: 0,
+    paddingRight: 0,
 
 
   }

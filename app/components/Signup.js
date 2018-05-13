@@ -3,12 +3,14 @@ import {
   StyleSheet,
   Text,
   View,
-  TouchableOpacity
+  TouchableOpacity,
+  TextInput
+
 } from 'react-native';
 
 
 import Logo from '../components/Logo.js'
-import Form from '../components/Form.js'
+// import Form from '../components/Form.js'
 import {Actions} from 'react-native-router-flux';
 
 
@@ -17,7 +19,11 @@ export default class Signup extends React.Component {
 
 
   goBack(){
-    Actions.pop() //pop to go back to the previous page
+    Actions.login() //pop to go back to the previous page
+  }
+
+  home(){
+    Actions.profile()
   }
 
   render() {
@@ -26,7 +32,48 @@ export default class Signup extends React.Component {
 
       <View style = {styles.container}>
       <Logo />
-      <Form type="Signup"/>
+
+      <TextInput
+      style = {styles.inputBox}
+      underlineColorAndroid = 'rgba(0,0,0,0)'
+      placeholder = 'Name'
+      placeholderTextColor = '#ffffff'
+      selectionColor = '#fff'
+      onSubmitEditing={()=> this.password.focus()}
+      />
+
+      <TextInput
+      style = {styles.inputBox}
+      underlineColorAndroid = 'rgba(0,0,0,0)'
+      placeholder = 'Email'
+      placeholderTextColor = '#ffffff'
+      selectionColor = '#fff'
+      onSubmitEditing={()=> this.password.focus()}
+      />
+
+      <TextInput
+      style = {styles.inputBox}
+      underlineColorAndroid = 'rgba(0,0,0,0)'
+      placeholder = 'Choose a User Name'
+      placeholderTextColor = '#ffffff'
+      selectionColor = '#fff'
+      onSubmitEditing={()=> this.password.focus()}
+      />
+
+      <TextInput
+      style = {styles.inputBox}
+      underlineColorAndroid = 'rgba(0,0,0,0)'
+      placeholder = 'Password'
+      secureTextEntry = {true}
+      placeholderTextColor = '#ffffff'
+      ref = {(input) => this.password = input}
+      />
+
+      <TouchableOpacity style={styles.button}>
+
+      <TouchableOpacity onPress={this.profile}><Text style = {styles.buttonText}>Sign Up</Text></TouchableOpacity>
+
+      </TouchableOpacity>
       <View style = {styles.signupTextContent}>
         <Text style={styles.signupTextColor}> Already have an account ? </Text>
         <TouchableOpacity onPress={this.goBack}><Text style = {styles.signupButton}>Sign In</Text></TouchableOpacity>
@@ -66,6 +113,29 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '500'
 
+  },
+
+  inputBox: {
+    width: 300,
+    backgroundColor: 'rgba(255,255,255,0.3)',
+    paddingHorizontal: 35,
+    color: '#ffffff',
+    marginVertical: 15
+  },
+
+  button: {
+    width: 300,
+    backgroundColor: '#1E88E5',
+    marginVertical: 15,
+    paddingVertical: 12
+
+  },
+
+  buttonText: {
+      fontSize: 18,
+      fontWeight: '500',
+      color: '#ffffff',
+      textAlign: 'center'
   }
 
 
