@@ -23,6 +23,7 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "babel-preset-env": "^1.7.0",
     "bcrypt": "^2.0.1",
     "body-parser": "^1.17.2",
     "expo": "^27.0.1",
