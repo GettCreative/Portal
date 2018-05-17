@@ -1,4 +1,4 @@
-import React from 'react';
+
 import React, { Component } from 'react';
 import { AppRegistry, View, ScrollView, Image, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
