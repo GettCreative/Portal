@@ -24,14 +24,14 @@ export default class Login extends React.Component {
 
 
       <View style = {styles.container}>
-      <Logo />
-      <Form type="Login"/>
-      <View style = {styles.signupTextContent}>
-        <Text style={styles.signupTextColor}> Dont Have an Account Yet ? </Text>
-        <TouchableOpacity onPress={this.signup}>
-        <Text style = {styles.signupButton}>Sign Up</Text>
-        </TouchableOpacity>
-      </View>
+        <Logo />
+        <Form type="Login"/>
+        <View style = {styles.signupTextContent}>
+          <Text style={styles.signupTextColor}> Dont Have an Account Yet ? </Text>
+          <TouchableOpacity onPress={this.signup}>
+            <Text style = {styles.signupButton}>Sign Up</Text>
+          </TouchableOpacity>
+        </View>
 
       </View>
 

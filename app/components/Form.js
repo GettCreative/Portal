@@ -15,50 +15,50 @@ export default class SignUp extends React.Component {
       password:''
     }
   }
-login(){
-  var that = this
+  login(){
+    var that = this
 
     fetch('http://192.168.1.157:3000/login', {
-  method: 'POST',
-  headers: {
-    Accept: 'application/json',
-    'Content-Type': 'application/json',
-  },
-  body: JSON.stringify({
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
         password:that.state.password,
         email:that.state.email
-  }),
-});
-}
+      }),
+    });
+  }
 
 
   render (){
     return(
       <View style = {styles.container} >
         <TextInput
-        onChangeText={(email) => this.setState({email})}
-        style = {styles.inputBox}
-        underlineColorAndroid = 'rgba(0,0,0,0)'
-        placeholder = 'Email'
-        placeholderTextColor = '#ffffff'
-        selectionColor = '#fff'
-        keyboardType = "email-address" // to show @ in keyboard for easier UX
-        onSubmitEditing={()=> this.password.focus()}
+          onChangeText={(email) => this.setState({email})}
+          style = {styles.inputBox}
+          underlineColorAndroid = 'rgba(0,0,0,0)'
+          placeholder = 'Email'
+          placeholderTextColor = '#ffffff'
+          selectionColor = '#fff'
+          keyboardType = "email-address" // to show @ in keyboard for easier UX
+          onSubmitEditing={()=> this.password.focus()}
         />
 
         <TextInput
-        onChangeText={(password) => this.setState({password})}
-        style = {styles.inputBox}
-        underlineColorAndroid = 'rgba(0,0,0,0)'
-        placeholder = 'Password'
-        secureTextEntry = {true}
-        placeholderTextColor = '#ffffff'
-        ref = {(input) => this.password = input}
+          onChangeText={(password) => this.setState({password})}
+          style = {styles.inputBox}
+          underlineColorAndroid = 'rgba(0,0,0,0)'
+          placeholder = 'Password'
+          secureTextEntry = {true}
+          placeholderTextColor = '#ffffff'
+          ref = {(input) => this.password = input}
         />
 
         <TouchableOpacity onPress={this.login.bind(this)} style={styles.button}>
 
-        <Text style = {styles.buttonText}>{this.props.type}</Text>
+          <Text style = {styles.buttonText}>{this.props.type}</Text>
 
         </TouchableOpacity>
 
@@ -90,9 +90,9 @@ const styles = StyleSheet.create({
   },
 
   buttonText: {
-      fontSize: 18,
-      fontWeight: '500',
-      color: '#ffffff',
-      textAlign: 'center'
+    fontSize: 18,
+    fontWeight: '500',
+    color: '#ffffff',
+    textAlign: 'center'
   }
 })
