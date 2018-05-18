@@ -18,7 +18,7 @@ import {
   Icon,
   Font,
   Header
-} from 'react-native-elements'
+} from 'react-native-elements';
 
 import {Actions} from 'react-native-router-flux';
 
@@ -66,11 +66,40 @@ and carries away unwanted carbon dioxide and waste products.
     title='VIEW NOW' />
 </Card>
 
+
+
+<Card
+title='T-Rex'
+image={require('../images/Trex.jpg')}>
+<Text style={{marginBottom: 10}}>
+The idea with React Native Elements is more about component structure than actual design.
+</Text>
+<Button
+icon={<Icon name='code' color='#ffffff' />}
+backgroundColor='#03A9F4'
+buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+title='VIEW NOW' />
+</Card>
+
+<Card
+title='Planets'
+image={require('../images/bio.png')}>
+<Text style={{marginBottom: 10}}>
+The idea with React Native Elements is more about component structure than actual design.
+</Text>
+<Button
+icon={<Icon name='code' color='#ffffff' />}
+backgroundColor='#03A9F4'
+buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+title='VIEW NOW' />
+</Card>
+
+
 <Card
 title='Home Cinema'
 image={require('../images/Cinema.jpg')}>
 <Text style={{marginBottom: 10}}>
-Feeling bored ? 
+Feeling bored ?
 </Text>
 <Button
 icon={<Icon name='code' color='#ffffff' />}
@@ -79,31 +108,7 @@ buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
 title='VIEW NOW' />
 </Card>
 
-<Card
-title='HELLO WORLD'
-image={require('../images/bio.png')}>
-<Text style={{marginBottom: 10}}>
-The idea with React Native Elements is more about component structure than actual design.
-</Text>
-<Button
-icon={<Icon name='code' color='#ffffff' />}
-backgroundColor='#03A9F4'
-buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-title='VIEW NOW' />
-</Card>
 
-<Card
-title='HELLO WORLD'
-image={require('../images/bio.png')}>
-<Text style={{marginBottom: 10}}>
-The idea with React Native Elements is more about component structure than actual design.
-</Text>
-<Button
-icon={<Icon name='code' color='#ffffff' />}
-backgroundColor='#03A9F4'
-buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-title='VIEW NOW' />
-</Card>
 
 
 
