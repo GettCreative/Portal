@@ -7,7 +7,6 @@ import {
 
 //Imports
 import Routes from './app/Routes.js'
-import Profile from './app/components/Profile.js'
 import Gallery from './app/components/Gallery.js'
 
 

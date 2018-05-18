@@ -28,7 +28,9 @@ export default class Gallery extends Component {
       <ScrollView style={styles.Container}>
 
 
-        <Header centerComponent={{ text: 'Welcome To Portal', style: { color: '#fff' } }} />
+        <Header
+          centerComponent={{ text: 'Welcome To Portal', style: { color: '#fff' } }}
+       />
 
 
         <Card
@@ -97,10 +99,12 @@ export default class Gallery extends Component {
 
 
                 <Card
-                  title='Home Cinema'
-                  image={require('../images/Cinema.jpg')}>
+                  title='Human Skeleton'
+                  image={require('../images/Skel2.jpg')}>
                   <Text style={{marginBottom: 10}}>
-                    Feeling bored ?
+                    The human skeleton is the internal framework of the body.
+                    It is composed of around 270 bones at birth – this total decreases to around 206 bones
+                    by adulthood after some bones get fused together.
                   </Text>
                   <Button
                     icon={<Icon name='code' color='#ffffff' />}
