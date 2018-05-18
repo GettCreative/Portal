@@ -7,7 +7,8 @@ import {
 
 //Imports
 import Routes from './app/Routes.js'
-import Profile from './app/components/Profile.js'
+import Gallery from './app/components/Gallery.js'
+
 
 
 
@@ -15,7 +16,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-      <Routes />
+        <Gallery />
       </View>
     );
   }
