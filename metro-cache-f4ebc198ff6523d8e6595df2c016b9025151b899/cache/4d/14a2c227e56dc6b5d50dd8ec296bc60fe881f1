@@ -50,10 +50,32 @@ __d(function (global, _require, module, exports, _dependencyMap) {
     function SignUp() {
       _classCallCheck(this, SignUp);
 
-      return _possibleConstructorReturn(this, (SignUp.__proto__ || Object.getPrototypeOf(SignUp)).apply(this, arguments));
+      var _this = _possibleConstructorReturn(this, (SignUp.__proto__ || Object.getPrototypeOf(SignUp)).call(this));
+
+      _this.state = {
+        email: '',
+        password: ''
+      };
+      return _this;
     }
 
     _createClass(SignUp, [{
+      key: "login",
+      value: function login() {
+        var that = this;
+        fetch('http://192.168.1.157:3000/login', {
+          method: 'POST',
+          headers: {
+            Accept: 'application/json',
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            password: that.state.password,
+            email: that.state.email
+          })
+        });
+      }
+    }, {
       key: "render",
       value: function render() {
         var _this2 = this;
@@ -64,10 +86,15 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             style: styles.container,
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 17
+              lineNumber: 37
             }
           },
           _react3.default.createElement(_reactNative.TextInput, {
+            onChangeText: function onChangeText(email) {
+              return _this2.setState({
+                email: email
+              });
+            },
             style: styles.inputBox,
             underlineColorAndroid: "rgba(0,0,0,0)",
             placeholder: "Email",
@@ -79,10 +106,15 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 18
+              lineNumber: 38
             }
           }),
           _react3.default.createElement(_reactNative.TextInput, {
+            onChangeText: function onChangeText(password) {
+              return _this2.setState({
+                password: password
+              });
+            },
             style: styles.inputBox,
             underlineColorAndroid: "rgba(0,0,0,0)",
             placeholder: "Password",
@@ -93,16 +125,17 @@ __d(function (global, _require, module, exports, _dependencyMap) {
             },
             __source: {
               fileName: _jsxFileName,
-              lineNumber: 28
+              lineNumber: 49
             }
           }),
           _react3.default.createElement(
             _reactNative.TouchableOpacity,
             {
+              onPress: this.login.bind(this),
               style: styles.button,
               __source: {
                 fileName: _jsxFileName,
-                lineNumber: 37
+                lineNumber: 59
               }
             },
             _react3.default.createElement(
@@ -111,7 +144,7 @@ __d(function (global, _require, module, exports, _dependencyMap) {
                 style: styles.buttonText,
                 __source: {
                   fileName: _jsxFileName,
-                  lineNumber: 39
+                  lineNumber: 61
                 }
               },
               this.props.type
