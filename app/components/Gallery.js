@@ -39,11 +39,20 @@ export default class Gallery extends Component {
           <Text style={{marginBottom: 10}}>
             A collection of eight planets and their moons in orbit round the sun, together with smaller bodies in the form of asteroids, meteoroids, and comets.
           </Text>
+
           <Button
             icon={<Icon name='code' color='#ffffff' />}
             backgroundColor='#03A9F4'
             buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-            title='VIEW NOW' />
+            title='Learn In Augmented Reality' />
+
+            <Text></Text>
+
+            <Button
+              icon={<Icon name='code' color='#ffffff' />}
+              backgroundColor='#ffb300'
+              buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+              title='Learn In Virtual Reality' />
           </Card>
 
 
@@ -60,7 +69,15 @@ export default class Gallery extends Component {
               icon={<Icon name='code' color='#ffffff' />}
               backgroundColor='#03A9F4'
               buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-              title='VIEW NOW' />
+              title='Learn In Augmented Reality' />
+
+              <Text></Text>
+
+              <Button
+                icon={<Icon name='code' color='#ffffff' />}
+                backgroundColor='#ffb300'
+                buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                title='Learn In Virtual Reality' />
             </Card>
 
 
@@ -78,7 +95,15 @@ export default class Gallery extends Component {
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#03A9F4'
                 buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                title='VIEW NOW' />
+                title='Learn In Augmented Reality' />
+
+                <Text></Text>
+
+                <Button
+                  icon={<Icon name='code' color='#ffffff' />}
+                  backgroundColor='#ffb300'
+                  buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                  title='Learn In Virtual Reality' />
               </Card>
 
 
@@ -94,7 +119,15 @@ export default class Gallery extends Component {
                   icon={<Icon name='code' color='#ffffff' />}
                   backgroundColor='#03A9F4'
                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                  title='VIEW NOW' />
+                  title='Learn In Augmented Reality' />
+
+                  <Text></Text>
+
+                  <Button
+                    icon={<Icon name='code' color='#ffffff' />}
+                    backgroundColor='#ffb300'
+                    buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                    title='Learn In Virtual Reality' />
                 </Card>
 
 
@@ -110,13 +143,22 @@ export default class Gallery extends Component {
                     icon={<Icon name='code' color='#ffffff' />}
                     backgroundColor='#03A9F4'
                     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                    title='VIEW NOW' />
+                    title='Learn In Augmented Reality' />
+
+                    <Text></Text>
+
+                    <Button
+                      icon={<Icon name='code' color='#ffffff' />}
+                      backgroundColor='#ffb300'
+                      buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
+                      title='Learn In Virtual Reality' />
                   </Card>
 
-
-
-
-
+                  <Text></Text>
+                  <Text></Text>
+                  <Text></Text>
+                  <Text></Text>
+                  <Text h3>More Coming Soon!</Text>
 
                 </ScrollView>
               );
