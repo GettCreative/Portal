@@ -12,10 +12,10 @@ db.once('open', function() {
 });
 
 var userSchema = mongoose.Schema({
-  email: String,
+  email: {type:String,unique:true},
   password: String,
   name:String,
-  username:String
+  username:{type:String,unique:true}
 });
 
 var User = mongoose.model('User', userSchema);
@@ -31,4 +31,4 @@ var save=function(data,callback){
 }
 
 module.exports.save = save;
-module.exports.User = User
+module.exports= User

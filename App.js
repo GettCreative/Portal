@@ -15,9 +15,12 @@ import Gallery from './app/components/Gallery.js'
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Gallery />
-      </View>
+    
+    <Routes />
+      // <View style={styles.container}>
+      //   <Gallery />
+      // </View>
+      
     );
   }
 }
