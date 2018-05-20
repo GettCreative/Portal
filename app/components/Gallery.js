@@ -163,16 +163,7 @@
                     </Card>
 
 
-                    title='Learn In Augmented Reality' />
-
-                    <Text></Text>
-
-                    <Button
-                      icon={<Icon name='code' color='#ffffff' />}
-                      backgroundColor='#ffb300'
-                      buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-                      title='Learn In Virtual Reality' />
-                  </Card>
+                    
 
                   <Text></Text>
                   <Text></Text>
