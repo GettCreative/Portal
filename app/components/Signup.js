@@ -36,7 +36,7 @@ export default class Signup extends React.Component {
   register(){
     var that = this
 
-    fetch('http://192.168.2.16:3000/signup', {
+    fetch('http://192.168.1.115:3000/signup', {
       method: 'POST',
       headers: {
         Accept: 'application/json',

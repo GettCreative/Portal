@@ -18,10 +18,10 @@ export default class SignUp extends React.Component {
   login(){
     var that = this
 
-    fetch('http://192.168.1.157:3000/login', {
+    fetch('http://192.168.1.115:3000/login', {
       method: 'POST',
       headers: {
-        Accept: 'application/json',
+        'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
