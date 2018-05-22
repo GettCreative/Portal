@@ -21,7 +21,6 @@ saveUninitialized: true
 
 //signup
 app.post("/signup",function(req,res){
-  console.log(req.body)
  var email =req.body.email
  var username = req.body.username
  var name = req.body.name
@@ -45,7 +44,7 @@ var password = req.body.password
      })
  }else{
    console.log('This email is already taken ..!');
-   res.send( `you signup before` )
+    res.status(404).send(err);
  }
  })
 });
@@ -60,17 +59,22 @@ app.post("/login",function(req,res){
  var password=req.body.password;
  //searching for user by the username and comparing passwords.
  User.findOne({email:email},function(err,user){
-   if(!user){
-     console.log('This email does not exist in database !');
-     res.send( `this email does not exist in database please create new user now` )
-   }else{
+  if(err)
+    {res.send(err)}
+
+   else if(!user){
+     // console.log('This email does not exist in database !');
+     res.status(404).send( "this user does not exist in database please create new user now" )
+   }
+   else{
    bcrypt.compare(password,user.password,function(err,match){
          if(match){
-           console.log('Successful login');
-           utils.createSession(req,res,user,email);
+           
+           utils.createSession(req,res,user);
+
          }else{
-           console.log('Wrong password .!');
-           res.send(`this password is wrong please insert your email again and your correct password`);
+           // console.log('Wrong password .!');
+           res.status(404).send(err);
      }
    })}
  })

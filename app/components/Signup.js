@@ -35,7 +35,7 @@ export default class Signup extends React.Component {
   }
   register(){
     var that = this
-
+  if(this.state.email.length && this.state.password.length && this.state.name && this.state.username!==0){
     fetch('http://192.168.1.115:3000/signup', {
       method: 'POST',
       headers: {
@@ -48,7 +48,14 @@ export default class Signup extends React.Component {
         name:that.state.name,
         email:that.state.email
       }),
-    });
+    }).then((responsedata) => {
+        if(responsedata.status === 200){
+          alert('Signup Successfully')
+        }else{
+          alert("This email is already taken ..!")
+        }
+    })
+  }else{alert("plz fill all info")}
   }
   render() {
     return (

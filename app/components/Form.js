@@ -6,7 +6,7 @@ import {
   TextInput,
   TouchableOpacity
 } from 'react-native';
-
+import {Actions} from 'react-native-router-flux';
 export default class SignUp extends React.Component {
   constructor(){
     super()
@@ -17,7 +17,7 @@ export default class SignUp extends React.Component {
   }
   login(){
     var that = this
-
+    if(this.state.email.length && this.state.password.length !==0){
     fetch('http://192.168.1.115:3000/login', {
       method: 'POST',
       headers: {
@@ -28,8 +28,16 @@ export default class SignUp extends React.Component {
         password:that.state.password,
         email:that.state.email
       }),
-    });
+    }).then((responsedata) => {
+        if(responsedata.status === 200){
+          alert('Signedin Successfully')
+        }else{
+          alert("something error")
+        }
+    })
   }
+  else{alert("plz fill all info")}
+}
 
 
   render (){
