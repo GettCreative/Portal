@@ -52,7 +52,7 @@ export default class Signup extends React.Component {
         if(responsedata.status === 200){
           alert('Signup Successfully')
         }else{
-          alert("This email is already taken ..!")
+          alert("This email is already taken.!")
         }
     })
   }else{alert("plz fill all info")}
