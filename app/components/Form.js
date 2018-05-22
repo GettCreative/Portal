@@ -30,7 +30,9 @@ export default class SignUp extends React.Component {
       }),
     }).then((responsedata) => {
         if(responsedata.status === 200){
+
           alert('Signedin Successfully')
+          Actions.gal()
         }else{
           alert("something error")
         }
