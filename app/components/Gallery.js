@@ -1,5 +1,3 @@
-
-
   import React, { Component } from 'react';
   import {
     AppRegistry,
@@ -22,7 +20,7 @@
   } from 'react-native-elements';
 
   import {
-    StackNavigator,
+   createStackNavigator,
   } from 'react-navigation';
 
   import {Actions} from 'react-native-router-flux';
@@ -206,7 +204,7 @@
     }
   }
 
-  const RootStack = StackNavigator(
+  const RootStack = createStackNavigator(
     {
       Home: {
         screen: HomeScreen,

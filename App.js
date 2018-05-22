@@ -9,17 +9,14 @@ import {
 import Routes from './app/Routes.js'
 import Gallery from './app/components/Gallery.js'
 
-
-
-
 export default class App extends React.Component {
   render() {
     return (
     
     <Routes />
       // <View style={styles.container}>
-      //   <Gallery />
-      // </View>
+        // <Gallery />
+       //</View>
       
     );
   }
