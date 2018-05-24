@@ -23,9 +23,13 @@
     "preset": "jest-expo"
   },
   "dependencies": {
+    "aws-sdk": "^2.245.1",
     "babel-preset-env": "^1.7.0",
     "bcrypt": "^2.0.1",
     "body-parser": "^1.17.2",
+    "busboy": "^0.2.14",
+    "busboy-body-parser": "^0.3.2",
+    "connect-busboy": "0.0.2",
     "expo": "^27.0.1",
     "express": "^4.15.0",
     "express-session": "^1.15.6",
