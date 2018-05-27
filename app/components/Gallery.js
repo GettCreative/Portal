@@ -138,6 +138,13 @@
                       title='VIEW NOW' />
                     </Card>
 
+
+
+                   <Text></Text>
+-                  <Text></Text>
+-                  <Text></Text>
+-                  <Text></Text>
+
                   <Text h3>More Coming Soon!</Text>
 
                   </ScrollView>
