@@ -18,7 +18,7 @@ export default class SignUp extends React.Component {
   login(){
     var that = this
     if(this.state.email.length && this.state.password.length !==0){
-    fetch('http://192.168.1.103:3000/login', {
+    fetch('http://192.168.1.115:3000/login', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
