@@ -33,28 +33,6 @@
           <Header
             centerComponent={{ text: 'Welcome To Portal', style: { color: '#fff' } }}
          />
-        <Card
-          title='Planets'
-          image={require('../images/SolarSys.png')}>
-          <Text style={{marginBottom: 10}}>
-            A collection of eight planets and their moons in orbit round the sun, together with smaller bodies in the form of asteroids, meteoroids, and comets.
-          </Text>
-
-          <Button
-            icon={<Icon name='code' color='#ffffff' />}
-            backgroundColor='#03A9F4'
-            buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-            title='Learn In Augmented Reality' />
-
-            <Text></Text>
-
-            <Button
-              icon={<Icon name='code' color='#ffffff' />}
-              backgroundColor='#ffb300'
-              buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
-              title='Learn In Virtual Reality' />
-          </Card>
-
 
           <Card
             title='Planets'
@@ -70,7 +48,7 @@
 
               <Text></Text>
 
-              <Button
+              <Button onPress={() => this.props.navigation.navigate('Details')}
                 icon={<Icon name='code' color='#ffffff' />}
                 backgroundColor='#ffb300'
                 buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -95,7 +73,7 @@
 
                 <Text></Text>
 
-                <Button
+                <Button onPress={() => this.props.navigation.navigate('Details')}
                   icon={<Icon name='code' color='#ffffff' />}
                   backgroundColor='#ffb300'
                   buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
@@ -121,7 +99,7 @@
 
                   <Text></Text>
 
-                  <Button
+                  <Button onPress={() => this.props.navigation.navigate('Details')}
                     icon={<Icon name='code' color='#ffffff' />}
                     backgroundColor='#ffb300'
                     buttonStyle={{borderRadius: 0, marginLeft: 0, marginRight: 0, marginBottom: 0}}
