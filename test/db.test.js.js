@@ -1,7 +1,8 @@
 var expect = require("chai").expect;
 var mongoose = require("mongoose");
 var User = require("../database-mongo/index.js");
-// var server = require("../server/index.js");
+//to run the test type:   ./node_modules/mocha/bin/mocha ./test/db.test.js
+
 
 
 
