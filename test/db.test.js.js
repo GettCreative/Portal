@@ -1,11 +1,10 @@
 var expect = require("chai").expect;
 var mongoose = require("mongoose");
 var User = require("../database-mongo/index.js");
-//to run the test type:   ./node_modules/mocha/bin/mocha ./test/db.test.js
-
-
-
-
+//to run the mocha test type:   ./node_modules/mocha/bin/mocha ./test/db.test.js
+//because npm test it will run the jest test.
+ 
+ 
 describe("User Model", function () {
 
   it("should be a Mongoose model", function () {
