@@ -5,6 +5,7 @@ import Login from './app/components/Login.js';
 import Signup from './app/components/Signup.js';
 import Gallery from './app/components/Gallery.js';
 import renderer from 'react-test-renderer';
+//to run the jest test type: npm test 
 
 it('renders without crashing', () => {
   const rendered = renderer.create(<App />).toJSON();
