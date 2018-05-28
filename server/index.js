@@ -155,37 +155,7 @@ s3bucket.createBucket(function () {
  req.pipe(busboy);
 });
 
-app.get('/api/upload/get',function(req,res,next){
-  
-  let s3bucket=new AWS.S3({
-  accessKeyId: IAM_USER_KEY,
-  secretAccessKey: IAM_USER_SECRET,
-  Bucket: BUCKET_NAME,
 
-  });
-
-  s3bucket.createBucket(function () {
-  var params = {
-   Bucket: BUCKET_NAME,
-   Key:video_name,
-   
-  };
-  s3bucket.getObject(params,function(err,data){
-    if(err){
-      console.log('error in callback')
-      console.log(err)
-    }
-    console.log('success');
-    console.log(data);
-
-    res.setHeader('Content-disposition','attachment; filename=planet (1).mp4')
-    res.setHeader('Content-length',data.ContentLength);
-    res.end(data.Body)
-  })
-
-
-  })
-});
 
 
 
