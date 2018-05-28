@@ -107,7 +107,7 @@ app.post("/login",function(req,res){
    })}
  })
 });
-
+//upload video to amazon s3 to get the urls for videos
 app.post('/api/upload', function (req, res, next) {
   const element1 = req.body.element1;
   var busboy = new Busboy({ headers: req.headers });
@@ -155,6 +155,7 @@ s3bucket.createBucket(function () {
  req.pipe(busboy);
 });
 
+//downlod video from amazon 
 app.get('/api/upload/get',function(req,res,next){
   
   let s3bucket=new AWS.S3({
